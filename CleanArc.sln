@@ -3,6 +3,16 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.13.35818.85 d17.13
 MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CleanArc.Application", "CleanArc.Application", "{02EA681E-C7D8-13C7-8484-4AC65E1B71E8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CleanArc.Domain", "CleanArc.Domain", "{D5645171-D650-4C76-A5A8-8F3523D0751C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CleanArc.Infra.IoC", "CleanArc.Infra.IoC", "{ABDCCAED-F46D-4A19-A09D-4BC2B9FDA0FD}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CleanArc.Infra.Data", "CleanArc.Infra.Data", "{E66EC79D-32D0-43AE-AFE8-2AE2BAAC60CE}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CleanArc.UI.MVC", "CleanArc.UI.MVC", "{3631DD5D-4ECD-4AE2-B109-6D3BB194D567}"
+EndProject
 Global
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
