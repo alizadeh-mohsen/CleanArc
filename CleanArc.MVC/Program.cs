@@ -1,8 +1,9 @@
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using CleanArc.MVC.Data;
-using Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore;
-using CleanArc.Infra.Data.Context; // Added this using directive
+using CleanArc.Infra.Data.Context;
+using Microsoft.Extensions.DependencyModel;
+using CleanArc.Infra.IoC; // Added this using directive
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -19,6 +20,8 @@ builder.Services.AddDatabaseDeveloperPageExceptionFilter(); // This line now wor
 builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
     .AddEntityFrameworkStores<ApplicationDbContext>();
 builder.Services.AddControllersWithViews();
+
+DependencyContainer.RegisterServices(builder.Services); // Register application services
 
 var app = builder.Build();
 
