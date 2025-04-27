@@ -2,7 +2,6 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using CleanArc.MVC.Data;
 using CleanArc.Infra.Data.Context;
-using Microsoft.Extensions.DependencyModel;
 using CleanArc.Infra.IoC; // Added this using directive
 
 var builder = WebApplication.CreateBuilder(args);
@@ -13,8 +12,10 @@ var universityDbConnectionString = builder.Configuration.GetConnectionString("Un
 
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
     options.UseSqlServer(connectionString));
+
 builder.Services.AddDbContext<UniversityDbContext>(options =>
 options.UseSqlServer(universityDbConnectionString));
+
 builder.Services.AddDatabaseDeveloperPageExceptionFilter(); // This line now works because of the added using directive
 
 builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)

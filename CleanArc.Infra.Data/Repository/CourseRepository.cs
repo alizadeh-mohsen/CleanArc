@@ -4,7 +4,7 @@ using CleanArc.Infra.Data.Context;
 
 namespace CleanArc.Infra.Data.Repository
 {
-    public class CourseRepository: ICourseRepository
+    public class CourseRepository : ICourseRepository
     {
         private readonly UniversityDbContext _universityDbContext;
 
@@ -18,5 +18,10 @@ namespace CleanArc.Infra.Data.Repository
             return _universityDbContext.Courses;
         }
 
+        public void Add(Course course)
+        {
+            _universityDbContext.Courses.Add(course);
+            _universityDbContext.SaveChanges();
+        }
     }
 }

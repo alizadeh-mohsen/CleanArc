@@ -9,6 +9,7 @@ namespace CleanArc.Domain.Interfaces
 {
     public interface ICourseRepository
     {
+        void Add(Course course);
         IEnumerable<Course> GetCourses();
     }
 }
