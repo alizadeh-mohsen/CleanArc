@@ -1,10 +1,10 @@
-using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
-using CleanArc.MVC.Models;
 using CleanArc.Application.Interfaces;
+using Microsoft.AspNetCore.Authorization;
 
 namespace CleanArc.MVC.Controllers;
 
+[Authorize]
 public class CourseController : Controller
 {
     private readonly ILogger<HomeController> _logger;
