@@ -1,0 +1,13 @@
+﻿@model CleanArc.Application.ViewModels.CourseViewModel
+
+@foreach (var course in Model.Courses)
+{
+    <div class="row">
+        <div class="col-md-4">
+            <h3>@course.Title</h3>
+            <img src="@course.Image" width="128" height="128" />
+            <p>@course.Description</p>
+        </div>
+
+    </div>
+}
