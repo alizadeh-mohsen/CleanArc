@@ -1,8 +1,8 @@
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using CleanArc.MVC.Data;
-using CleanArc.Infra.Data;
-using Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore; // Added this using directive
+using Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore;
+using CleanArc.Infra.Data.Context; // Added this using directive
 
 var builder = WebApplication.CreateBuilder(args);
 

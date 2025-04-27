@@ -1,7 +1,7 @@
-﻿using CleanArc.Domain;
+﻿using CleanArc.Domain.Models;
 using Microsoft.EntityFrameworkCore;
 
-namespace CleanArc.Infra.Data
+namespace CleanArc.Infra.Data.Context
 {
     public class UniversityDbContext: DbContext
     {

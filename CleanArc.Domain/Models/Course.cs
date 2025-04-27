@@ -1,4 +1,4 @@
-﻿namespace CleanArc.Domain
+﻿namespace CleanArc.Domain.Models
 {
     public class Course
     {
